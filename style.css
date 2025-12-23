@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111;
+    position: sticky;
+    top: 0;
+}
+
+header .logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #f7c600;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 120px 10%;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.buttons .btn {
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.primary {
+    background: #f7c600;
+    color: #000;
+}
+
+.secondary {
+    border: 2px solid #f7c600;
+    color: #f7c600;
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Connect */
+.connect .links a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #f7c600;
+    text-decoration: none;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    width: 220px;
+}
+
+.stat-box h3 {
+    font-size: 40px;
+    color: #f7c600;
+}
+
+/* Testimonials */
+.testimonial {
+    background: #1a1a1a;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/* Subscribe */
+.subscribe input {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.subscribe button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    background: #f7c600;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    font-size: 14px;
+}
