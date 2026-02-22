@@ -3,288 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Krishna Influencer Marketing Agency</title>
-    
+    <title>Shree Krishna Influencer Marketing | Premium Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* --- CSS STARTS HERE --- */
+        :root {
+            --primary: #00d2ff;
+            --secondary: #9d50bb;
+            --accent: #ff9f43;
+            --dark-bg: #050505;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
+            background-color: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
         }
 
-        /* Navbar Design */
-        header {
-            background: #ffffff;
-            padding: 15px 8%;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        /* Gradient Background Blur */
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            filter: blur(150px);
+            z-index: -1;
+            border-radius: 50%;
+            opacity: 0.4;
         }
 
+        /* Navbar */
         nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .logo {
-            font-size: 26px;
-            font-weight: 800;
-            color: #1a1a1a;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .logo { font-size: 1.6rem; font-weight: 800; }
+        .logo span { color: var(--primary); }
 
-        .logo span {
-            color: #ff9f43; /* Saffron/Orange Touch for 'Shree Krishna' vibe */
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ff9f43;
-        }
-
-        .cta-btn {
-            background: #ff9f43;
-            color: #fff !important;
-            padding: 10px 22px;
-            border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(255, 159, 67, 0.3);
-        }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 35px; }
+        nav ul li a { text-decoration: none; color: #ccc; transition: 0.3s; font-weight: 500; }
+        nav ul li a:hover { color: var(--primary); }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #fff;
-            padding: 0 20px;
+            padding: 0 10%;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: clamp(3rem, 10vw, 5.5rem);
             font-weight: 800;
-        }
-
-        .hero-content h1 span {
-            color: #ff9f43;
+            line-height: 1;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero-content p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            color: #aaa;
+            margin-bottom: 40px;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-inline: auto;
         }
 
-        .main-btn {
-            display: inline-block;
-            padding: 16px 35px;
-            background: #ff9f43;
-            color: #fff;
+        /* Buttons */
+        .btn-group { display: flex; gap: 20px; justify-content: center; }
+        .btn {
+            padding: 16px 40px;
+            border-radius: 12px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
+            font-weight: 700;
             transition: 0.4s;
-            text-transform: uppercase;
         }
+        .btn-primary { background: var(--primary); color: #000; }
+        .btn-secondary { border: 1px solid #444; color: #fff; }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3); }
 
-        .main-btn:hover {
-            background: #e67e22;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 80px 10%;
+            background: var(--glass);
+            margin: 50px 0;
         }
+        .stat-item h3 { font-size: 2.5rem; color: var(--primary); }
+        .stat-item p { color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
 
-        /* Services Section */
-        #services {
-            padding: 100px 8%;
-            text-align: center;
-            background: #fff;
-        }
-
-        .section-title {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            color: #222;
-        }
-
-        .underline {
-            width: 80px;
-            height: 4px;
-            background: #ff9f43;
-            margin: 0 auto 50px;
-            border-radius: 2px;
-        }
-
-        .services-container {
+        /* Pricing Section */
+        .pricing { padding: 100px 10%; text-align: center; }
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
-
-        .service-card {
-            background: #f9f9f9;
+        .price-card {
+            background: rgba(255,255,255,0.03);
             padding: 50px 30px;
-            border-radius: 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
             transition: 0.3s;
-            border: 1px solid #eee;
         }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            background: #fff;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-
-        .service-card i {
-            font-size: 50px;
-            color: #ff9f43;
-            margin-bottom: 25px;
-        }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
+        .price-card.featured { border-color: var(--primary); background: rgba(0, 210, 255, 0.05); }
+        .price-card:hover { transform: scale(1.03); }
+        .price-card h2 { font-size: 3rem; margin: 20px 0; }
+        .price-card ul { list-style: none; margin-bottom: 30px; color: #aaa; }
+        .price-card ul li { margin: 10px 0; }
 
         /* Contact Section */
-        #contact {
-            padding: 100px 8%;
-            background: #1a1a1a;
-            color: #fff;
-            text-align: center;
+        .contact { padding: 100px 10%; background: #080808; display: flex; gap: 50px; flex-wrap: wrap; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .contact-form { flex: 1; min-width: 300px; background: var(--glass); padding: 40px; border-radius: 20px; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 15px; margin-bottom: 15px; background: rgba(255,255,255,0.05);
+            border: 1px solid #333; color: white; border-radius: 8px;
         }
 
-        .contact-container {
-            max-width: 600px;
-            margin: 40px auto;
-        }
+        footer { text-align: center; padding: 50px; border-top: 1px solid #222; color: #555; }
 
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            font-size: 1rem;
-        }
-
-        textarea {
-            height: 120px;
-        }
-
-        /* Footer */
-        footer {
-            padding: 30px;
-            text-align: center;
-            background: #111;
-            color: #777;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.5rem; }
-            nav ul { display: none; } /* Mobile menu can be added later */
+            nav ul { display: none; }
+            .hero-content h1 { font-size: 3.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Shree<span> Krishna</span></div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact" class="cta-btn">Join Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="blob" style="top: -100px; right: -100px;"></div>
+    <div class="blob" style="bottom: 100px; left: -100px; background: var(--secondary);"></div>
 
-    <section id="home" class="hero">
+    <nav>
+        <div class="logo">Shree<span>Krishna</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Experience</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Grow Your Brand with <span>Influencers</span></h1>
-            <p>Shree Krishna Influencer Marketing Agency connects world-class brands with India's most engaging content creators.</p>
-            <a href="#services" class="main-btn">Get Started Now</a>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="underline"></div>
-        <div class="services-container">
-            <div class="service-card">
-                <i class="fas fa-rocket"></i>
-                <h3>Viral Campaigns</h3>
-                <p>Hum aise campaigns design karte hain jo social media par aag laga dein.</p>
-            </div>
-            <div class="service-card">
-                <i class="fab fa-instagram"></i>
-                <h3>Instagram Growth</h3>
-                <p>Real followers aur high engagement ke liye expert strategies.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-handshake"></i>
-                <h3>Brand Deals</h3>
-                <p>Influencers ke liye best brand collaborations aur deals secure karna.</p>
+            <h1>Making Brands<br><span>Internet Famous</span></h1>
+            <p>Hum sirf marketing nahi karte, hum trends banate hain. Shree Krishna Agency is India's premier gateway to viral success.</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">Start Campaign</a>
+                <a href="#pricing" class="btn btn-secondary">View Plans</a>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Let's Talk Business</h2>
-        <p>Aapki brand ki growth hamari zimmedari hai.</p>
-        <div class="contact-container">
-            <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Business Email" required>
-                <textarea placeholder="Message (Tell us about your requirements)"></textarea>
-                <button type="submit" class="main-btn" style="width: 100%; cursor: pointer; border: none;">Send Inquiry</button>
-            </form>
+    <div class="stats">
+        <div class="stat-item"><h3>500+</h3><p>Influencers</p></div>
+        <div class="stat-item"><h3>50M+</h3><p>Total Reach</p></div>
+        <div class="stat-item"><h3>100+</h3><p>Brands Worked</p></div>
+    </div>
+
+    <section class="pricing" id="pricing">
+        <h6>Transparent Pricing</h6>
+        <h2>Choose Your Growth Path</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Starter</h3>
+                <h2>₹15k<span>/mo</span></h2>
+                <ul>
+                    <li>5 Nano Influencers</li>
+                    <li>Instagram Story Post</li>
+                    <li>Basic Report</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Choose Starter</a>
+            </div>
+            <div class="price-card featured">
+                <h3>Growth</h3>
+                <h2>₹50k<span>/mo</span></h2>
+                <ul>
+                    <li>15 Micro Influencers</li>
+                    <li>Reels + Dedicated Post</li>
+                    <li>Strategy Consultation</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Choose Growth</a>
+            </div>
+            <div class="price-card">
+                <h3>Elite</h3>
+                <h2>Custom</h2>
+                <ul>
+                    <li>Celeb Influencers</li>
+                    <li>Pan-India Coverage</li>
+                    <li>Full Video Production</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-info">
+            <h2>Ready to dominate social media?</h2>
+            <p style="color: #888; margin: 20px 0;">Humein bataiye aapka brand kya karta hai, hum use viral karenge.</p>
+            <p><i class="fas fa-envelope" style="color: var(--primary);"></i> hello@shreekrishnaima.com</p>
+            <p><i class="fas fa-phone" style="color: var(--primary); margin-top: 15px;"></i> +91 98765 43210</p>
+        </div>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Business Email">
+            <textarea placeholder="Tell us about your campaign goals" rows="5"></textarea>
+            <button class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Shree Krishna Influencer Marketing Agency | Developed by Boss</p>
+        <p>&copy; 2026 Shree Krishna Influencer Marketing Agency | Handcrafted by Boss</p>
     </footer>
 
 </body>
